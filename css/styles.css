@@ -20,8 +20,8 @@ html {
   --hero-overlay-color: #2f303a;
   --clents-fill-color: #afb1b8;
   /* timing */
-  /* --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-delay: 250ms; */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-delay: 250ms;
 }
 
 body {
@@ -248,7 +248,6 @@ button {
 .nav-phone:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* index.html  */
@@ -400,21 +399,27 @@ button {
 
 .operation-box {
   position: relative;
+  width: 370px;
+  height: 294px;
 }
 
-.operation-box-dsc {
-  position: absolute;
+.img-overlay {
   bottom: 0;
-  padding: 27px 95px;
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+}
+
+.overlay-caption {
   font-weight: 700;
   line-height: 1.14;
   color: var(--main-page-color);
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  background-color: rgba(47, 48, 58, 0.8);
-  width: 100%;
-  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 /* team */
@@ -494,7 +499,7 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: var(--transition-delay) var(--timing-function);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon:hover,
@@ -532,13 +537,13 @@ button {
   fill: var(--clents-fill-color);
   justify-content: center;
   align-items: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
-  transition: var(--transition-delay) var(--timing-function);
 }
 
 /* portfolio.html  */
@@ -578,6 +583,8 @@ button {
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-btn:hover,
@@ -587,7 +594,6 @@ button {
   border: none;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* projects */
@@ -603,13 +609,13 @@ button {
   display: block;
   text-decoration: none;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:hover,
 .project-link:focus {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-img {
@@ -619,8 +625,7 @@ button {
 
 .project-overlay {
   position: absolute;
-  bottom: -1px;
-  left: 0;
+  bottom: 0;
   width: 370px;
   height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
@@ -629,7 +634,6 @@ button {
 }
 
 .project-link:hover .project-overlay {
-  top: 1px;
   transform: translate(0);
 }
 
@@ -799,7 +803,6 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 

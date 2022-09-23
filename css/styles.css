@@ -31,7 +31,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h1,

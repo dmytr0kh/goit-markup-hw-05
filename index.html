@@ -63,7 +63,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button type="button" class="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- benefits -->
@@ -131,40 +133,40 @@
             <li class="operation-item">
               <div class="operation-box">
                 <img
-                class="operation-img"
-                src="./images/box-1.jpg"
-                alt="Програміст за процесом розробки на робочому місці"
-                width="370"
-              />
-              <div class="img-overlay">
-                <h3 class="overlay-caption">Десктопні додатки</h3>
-              </div>
-              </div>
-            </li>
-            <li class="operation-item">
-              <div class="operation-box">
-                <img
-                class="operation-img"
-                src="./images/box-2.jpg"
-                alt="Веб дизайнери працюють над інтерфейсом програми для смартфонів"
-                width="370"
-              />
-              <div class="img-overlay">
-                <h3 class="overlay-caption">Мобільні додатки</h3>
-              </div>
+                  class="operation-img"
+                  src="./images/box-1.jpg"
+                  alt="Програміст за процесом розробки на робочому місці"
+                  width="370"
+                />
+                <div class="operation-overlay">
+                  <h3 class="overlay-title">Десктопні додатки</h3>
+                </div>
               </div>
             </li>
             <li class="operation-item">
               <div class="operation-box">
                 <img
-                class="operation-img"
-                src="./images/box-3.jpg"
-                alt="Веб-дизайнер в процесі вибору кольору за допомогою графічного планшету"
-                width="370"
-              />
-              <div class="img-overlay">
-                <h3 class="overlay-caption">Дизайнерські рішення</h3>
+                  class="operation-img"
+                  src="./images/box-2.jpg"
+                  alt="Веб дизайнери працюють над інтерфейсом програми для смартфонів"
+                  width="370"
+                />
+                <div class="operation-overlay">
+                  <h3 class="overlay-title">Мобільні додатки</h3>
+                </div>
               </div>
+            </li>
+            <li class="operation-item">
+              <div class="operation-box">
+                <img
+                  class="operation-img"
+                  src="./images/box-3.jpg"
+                  alt="Веб-дизайнер в процесі вибору кольору за допомогою графічного планшету"
+                  width="370"
+                />
+                <div class="operation-overlay">
+                  <h3 class="overlay-title">Дизайнерські рішення</h3>
+                </div>
               </div>
             </li>
           </ul>
@@ -405,6 +407,16 @@
         </div>
       </div>
     </footer>
+    <!-- backdrop -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="button-modal" data-modal-close>
+          <svg class="modal-icon" width="18px" height="18px">
+            <use href="./images/images.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -19,6 +19,7 @@ html {
   --border-color: #ececec;
   --hero-overlay-color: #2f303a;
   --clents-fill-color: #afb1b8;
+  --close-btn-fill: #000000;
   /* timing */
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-delay: 250ms;
@@ -163,7 +164,7 @@ button {
   color: var(--accent-color);
 }
 
-.nav-link:after {
+/* .nav-link:after {
   content: "";
   position: absolute;
   left: 0;
@@ -174,9 +175,9 @@ button {
   background-color: var(--accent-color);
   opacity: 0;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.nav-link:hover:after {
+/* .nav-link:hover:after {
   display: block;
   opacity: 1;
 }
@@ -184,7 +185,7 @@ button {
 .nav-link:focus:after {
   display: block;
   opacity: 0.5;
-}
+} */
 
 .link-current::after {
   content: "";
@@ -403,7 +404,7 @@ button {
   height: 294px;
 }
 
-.img-overlay {
+.operation-overlay {
   bottom: 0;
   position: absolute;
   background-color: rgba(47, 48, 58, 0.8);
@@ -411,7 +412,7 @@ button {
   height: 70px;
 }
 
-.overlay-caption {
+.overlay-title {
   font-weight: 700;
   line-height: 1.14;
   color: var(--main-page-color);
@@ -625,15 +626,18 @@ button {
 
 .project-overlay {
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 370px;
   height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translatey(100%);
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:hover .project-overlay {
+  /* top: 0;
+  left: 0; */
   transform: translate(0);
 }
 
@@ -810,4 +814,64 @@ button {
 .social-item:focus {
   fill: var(--main-page-color);
   background-color: var(--accent-color);
+}
+
+/* backdrop */
+
+/* backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 521px;
+  background-color: var(--main-page-color);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  fill: var(--close-btn-fill);
+  background-color: var(--main-page-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal:hover {
+  background-color: var(--accent-color);
+  fill: var(--main-page-color);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
